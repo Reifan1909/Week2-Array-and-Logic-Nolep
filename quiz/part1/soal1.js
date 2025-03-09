@@ -9,20 +9,20 @@ let input = [
     ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
 ]
 
-function dataHandling() {
+function dataHandling(inp) {
     let out = "";
-    for(i = 0; i < input.length; i++) {
-        for (j = 0; j < input[i].length; j++) {
+    for(i = 0; i < inp.length; i++) {
+        for (j = 0; j < inp[i].length; j++) {
             if (j === 0) {
-                out += (`Nomor ID: ${input[i][j]}\n`);
+                out += (`Nomor ID: ${inp[i][j]}\n`);
             } else if (j === 1) {
-                out += (`Nama Lengkap: ${input[i][j]}\n`);
+                out += (`Nama Lengkap: ${inp[i][j]}\n`);
             } else if (j === 2){
-                tmp = (`${input[i][j]}`);
+                tmp = (`${inp[i][j]}`);
             } else if (j === 3) {
-                out += (`TTL: ${tmp} ${input[i][j]}\n`)
+                out += (`TTL: ${tmp} ${inp[i][j]}\n`)
             }else {
-                out += (`Hobi: ${input[i][j]}\n`);
+                out += (`Hobi: ${inp[i][j]}\n`);
             }
         }
         out += ("\n");
@@ -30,7 +30,7 @@ function dataHandling() {
     return out;
 }
 
-console.log(dataHandling());
+console.log(dataHandling(input));
 
 /*
 output yang diharapkan
