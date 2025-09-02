@@ -1,10 +1,14 @@
 //tentukan apakah ini deret aritmatika atau bukan
 function tentukanDeretAritmatika(arr) {
   // you can only write your code here!
-  let out = 0;
-  for (let i = 0; i < arr.length; i++) {
-        
+  let selisih = arr[1] - arr[0];
+  for (let i = 2; i < arr.length; i++) {
+    if (arr[i] - arr[i - 1] !== selisih) {
+      return false;
+    }
   }
+
+  return true;
 }
 
 // TEST CASES
